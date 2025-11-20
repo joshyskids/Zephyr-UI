@@ -1,10 +1,14 @@
+-- [[
+ Welcome To Zephyr. Owner/Founder: Joshyskids (i dont actually skid man stop sayin that 😭)
+ Will Be A Full UI Lib Soon, Btw I Have OCD So Thats Why This Is So AI Looking.
+ Ty For Using Zephyr!
+]]--
+
 repeat task.wait(1) until game.Loaded
 
 local Zephyr = {}
 
 Zephyr.functions = {}
-
--- {{ Create Zephyr UI }} --
 
 if game.Players.LocalPlayer.PlayerGui:FindFirstChild("ZephyrUILIB") then
 	game.Players.LocalPlayer.PlayerGui.ZephyrUILIB:Destroy()
@@ -21,9 +25,7 @@ Functions.CreateUI = function()
 	Zephyr["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 	Zephyr["1"]["Name"] = [[ZephyrUILIB]];
 	Zephyr["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-
-
-	-- StarterGui.Zephyr.FullScreen
+	
 	Zephyr["2"] = Instance.new("Frame", Zephyr["1"]);
 	Zephyr["2"]["BorderSizePixel"] = 0;
 	Zephyr["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -32,8 +34,6 @@ Functions.CreateUI = function()
 	Zephyr["2"]["Name"] = [[FullScreen]];
 	Zephyr["2"]["BackgroundTransparency"] = 1;
 
-
-	-- StarterGui.Zephyr.FullScreen.Main
 	Zephyr["3"] = Instance.new("Frame", Zephyr["2"]);
 	Zephyr["3"]["BorderSizePixel"] = 0;
 	Zephyr["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -43,19 +43,12 @@ Functions.CreateUI = function()
 	Zephyr["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 	Zephyr["3"]["Name"] = [[Main]];
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.UICorner
 	Zephyr["4"] = Instance.new("UICorner", Zephyr["3"]);
 
-
-
-	-- StarterGui.Zephyr.FullScreen.Main.UIGradient
 	Zephyr["5"] = Instance.new("UIGradient", Zephyr["3"]);
 	Zephyr["5"]["Rotation"] = 90;
 	Zephyr["5"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(26, 26, 26)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(31, 31, 31))};
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side
 	Zephyr["6"] = Instance.new("Frame", Zephyr["3"]);
 	Zephyr["6"]["BorderSizePixel"] = 0;
 	Zephyr["6"]["BackgroundColor3"] = Color3.fromRGB(221, 221, 221);
@@ -64,13 +57,8 @@ Functions.CreateUI = function()
 	Zephyr["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 	Zephyr["6"]["Name"] = [[Side]];
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.UICorner
 	Zephyr["7"] = Instance.new("UICorner", Zephyr["6"]);
 
-
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.NameText
 	Zephyr["8"] = Instance.new("TextLabel", Zephyr["6"]);
 	Zephyr["8"]["TextWrapped"] = true;
 	Zephyr["8"]["BorderSizePixel"] = 0;
@@ -88,19 +76,14 @@ Functions.CreateUI = function()
 	Zephyr["8"]["Name"] = [[NameText]];
 	Zephyr["8"]["Position"] = UDim2.new(0.06113, 5, 0.01812, 2);
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.UIGradient
 	Zephyr["9"] = Instance.new("UIGradient", Zephyr["6"]);
 	Zephyr["9"]["Rotation"] = 90;
 	Zephyr["9"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(26, 26, 26)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(31, 31, 31))};
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.settings
 	Zephyr["a"] = Instance.new("ImageButton", Zephyr["6"]);
 	Zephyr["a"]["Active"] = false;
 	Zephyr["a"]["BorderSizePixel"] = 0;
 	Zephyr["a"]["BackgroundTransparency"] = 1;
-	-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 	Zephyr["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 	Zephyr["a"]["ImageColor3"] = Color3.fromRGB(123, 123, 123);
 	Zephyr["a"]["Selectable"] = false;
@@ -110,31 +93,20 @@ Functions.CreateUI = function()
 	Zephyr["a"]["Name"] = [[settings]];
 	Zephyr["a"]["Position"] = UDim2.new(-0.00739, 5, 0.95719, -5);
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.settings.UICorner
 	Zephyr["b"] = Instance.new("UICorner", Zephyr["a"]);
 	Zephyr["b"]["CornerRadius"] = UDim.new(1, 0);
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.settings.UIAspectRatioConstraint
 	Zephyr["c"] = Instance.new("UIAspectRatioConstraint", Zephyr["a"]);
 
-
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.UIStroke
 	Zephyr["d"] = Instance.new("UIStroke", Zephyr["6"]);
 	Zephyr["d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 	Zephyr["d"]["Thickness"] = 0.03;
 	Zephyr["d"]["Color"] = Color3.fromRGB(221, 221, 221);
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.UIStroke.UIGradient
 	Zephyr["e"] = Instance.new("UIGradient", Zephyr["d"]);
 	Zephyr["e"]["Rotation"] = 180;
 	Zephyr["e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(26, 26, 26)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(31, 31, 31))};
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.TabsContainer
 	Zephyr["f"] = Instance.new("ScrollingFrame", Zephyr["6"]);
 	Zephyr["f"]["Active"] = true;
 	Zephyr["f"]["BorderSizePixel"] = 0;
@@ -147,15 +119,11 @@ Functions.CreateUI = function()
 	Zephyr["f"]["ScrollBarThickness"] = 4;
 	Zephyr["f"]["BackgroundTransparency"] = 1;
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.TabsContainer.UIListLayout
 	Zephyr["10"] = Instance.new("UIListLayout", Zephyr["f"]);
 	Zephyr["10"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
 	Zephyr["10"]["Padding"] = UDim.new(0, 10);
 	Zephyr["10"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.TabsContainer.Tab
 	Zephyr["11"] = Instance.new("TextButton", Zephyr["f"]);
 	Zephyr["11"]["TextWrapped"] = true;
 	Zephyr["11"]["BorderSizePixel"] = 0;
@@ -171,12 +139,9 @@ Functions.CreateUI = function()
 	Zephyr["11"]["Name"] = [[Tab]];
 	Zephyr["11"]["Position"] = UDim2.new(0.02362, 0, 0, 0);
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.TabsContainer.Tab.Icon
 	Zephyr["12"] = Instance.new("ImageLabel", Zephyr["11"]);
 	Zephyr["12"]["BorderSizePixel"] = 0;
 	Zephyr["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-	-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 	Zephyr["12"]["AnchorPoint"] = Vector2.new(0, 0.5);
 	Zephyr["12"]["Image"] = [[rbxassetid://124360610240296]];
 	Zephyr["12"]["Size"] = UDim2.new(0.08035, 0, 0.53177, 0);
@@ -185,13 +150,8 @@ Functions.CreateUI = function()
 	Zephyr["12"]["Name"] = [[Icon]];
 	Zephyr["12"]["Position"] = UDim2.new(0.31335, -13, 0.5, 0);
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.TabsContainer.Tab.Icon.UIAspectRatioConstraint
 	Zephyr["13"] = Instance.new("UIAspectRatioConstraint", Zephyr["12"]);
 
-
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.TabsContainer.Tab
 	Zephyr["14"] = Instance.new("TextButton", Zephyr["f"]);
 	Zephyr["14"]["TextWrapped"] = true;
 	Zephyr["14"]["BorderSizePixel"] = 0;
@@ -207,12 +167,9 @@ Functions.CreateUI = function()
 	Zephyr["14"]["Name"] = [[Tab]];
 	Zephyr["14"]["Position"] = UDim2.new(0.02362, 0, 0, 0);
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.TabsContainer.Tab.Icon
 	Zephyr["15"] = Instance.new("ImageLabel", Zephyr["14"]);
 	Zephyr["15"]["BorderSizePixel"] = 0;
 	Zephyr["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-	-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 	Zephyr["15"]["ImageColor3"] = Color3.fromRGB(164, 164, 164);
 	Zephyr["15"]["AnchorPoint"] = Vector2.new(0, 0.5);
 	Zephyr["15"]["Image"] = [[rbxassetid://124360610240296]];
@@ -222,18 +179,11 @@ Functions.CreateUI = function()
 	Zephyr["15"]["Name"] = [[Icon]];
 	Zephyr["15"]["Position"] = UDim2.new(0.31335, -13, 0.5, 0);
 
-
-	-- StarterGui.Zephyr.FullScreen.Main.Side.TabsContainer.Tab.Icon.UIAspectRatioConstraint
 	Zephyr["16"] = Instance.new("UIAspectRatioConstraint", Zephyr["15"]);
 
-
-
-	-- StarterGui.Zephyr.FullScreen.Main.UIAspectRatioConstraint
 	Zephyr["17"] = Instance.new("UIAspectRatioConstraint", Zephyr["3"]);
 	Zephyr["17"]["AspectRatio"] = 1.92526;
 
-
-	-- StarterGui.Zephyr.FullScreen.WatermarkContainer
 	Zephyr["18"] = Instance.new("Frame", Zephyr["2"]);
 	Zephyr["18"]["BorderSizePixel"] = 0;
 	Zephyr["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -243,8 +193,6 @@ Functions.CreateUI = function()
 	Zephyr["18"]["Name"] = [[WatermarkContainer]];
 	Zephyr["18"]["BackgroundTransparency"] = 1;
 
-
-	-- StarterGui.Zephyr.FullScreen.WatermarkContainer.Watermark
 	Zephyr["19"] = Instance.new("Frame", Zephyr["18"]);
 	Zephyr["19"]["BorderSizePixel"] = 0;
 	Zephyr["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -254,8 +202,6 @@ Functions.CreateUI = function()
 	Zephyr["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 	Zephyr["19"]["Name"] = [[Watermark]];
 
-
-	-- StarterGui.Zephyr.FullScreen.WatermarkContainer.Watermark.TextLabel
 	Zephyr["1a"] = Instance.new("TextLabel", Zephyr["19"]);
 	Zephyr["1a"]["TextWrapped"] = true;
 	Zephyr["1a"]["BorderSizePixel"] = 0;
@@ -270,36 +216,23 @@ Functions.CreateUI = function()
 	Zephyr["1a"]["Text"] = [[Zephyr | V1.0.0 | FPS: 120]];
 	Zephyr["1a"]["Position"] = UDim2.new(0, 0, 0.11765, 0);
 
-
-	-- StarterGui.Zephyr.FullScreen.WatermarkContainer.Watermark.TextLabel.UITextSizeConstraint
 	Zephyr["1b"] = Instance.new("UITextSizeConstraint", Zephyr["1a"]);
 	Zephyr["1b"]["MaxTextSize"] = 14;
 
-
-	-- StarterGui.Zephyr.FullScreen.WatermarkContainer.Watermark.UICorner
 	Zephyr["1c"] = Instance.new("UICorner", Zephyr["19"]);
 
-
-
-	-- StarterGui.Zephyr.FullScreen.WatermarkContainer.Watermark.UIAspectRatioConstraint
 	Zephyr["1d"] = Instance.new("UIAspectRatioConstraint", Zephyr["19"]);
 	Zephyr["1d"]["AspectRatio"] = 6.29412;
 
-
-	-- StarterGui.Zephyr.FullScreen.WatermarkContainer.Watermark.UIGradient
 	Zephyr["1e"] = Instance.new("UIGradient", Zephyr["19"]);
 	Zephyr["1e"]["Rotation"] = 90;
 	Zephyr["1e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(26, 26, 26)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(31, 31, 31))};
 
-
-	-- StarterGui.Zephyr.FullScreen.WatermarkContainer.UIPadding
 	Zephyr["1f"] = Instance.new("UIPadding", Zephyr["18"]);
 	Zephyr["1f"]["PaddingTop"] = UDim.new(0, 5);
 end
 
 Functions.CreateUI()
-
--- {{ Zephyr Variables }} --
 
 Zephyr.spinning = false
 Zephyr.spinTween = nil
@@ -315,16 +248,11 @@ Zephyr.lowColor = Color3.fromRGB(255, 85, 85)
 Zephyr.midColor = Color3.fromRGB(255, 255, 85)
 Zephyr.highColor = Color3.fromRGB(85, 255, 85)
 
-
--- {{ Zephyr UI Objects }} --
-
 Zephyr.Main = Zephyr["1"].FullScreen.Main
 Zephyr.Side = Zephyr.Main.Side
 Zephyr.NameText = Zephyr.Side.NameText
 Zephyr.SettingsIcon = Zephyr.Side.settings
 Zephyr.Watermark = Zephyr.Main.Parent.WatermarkContainer.Watermark
-
--- {{ Zephyr Services }} --
 
 Zephyr.TweenService = game:GetService("TweenService")
 Zephyr.UserInputService = game:GetService("UserInputService")
@@ -332,10 +260,6 @@ Zephyr.RunService = game:GetService("RunService")
 Zephyr.Players = game:GetService("Players")
 Zephyr.Lighting = game:GetService("Lighting")
 Zephyr.ReplicatedStorage = game:GetService("ReplicatedStorage")
-
--- {{ Zephyr Functions }} --
-
-
 
 function Functions.Dragify(gui)
 	local ZephyrUserInputService = game:GetService("UserInputService")
@@ -382,18 +306,12 @@ function Functions.Dragify(gui)
 	end)
 end
 
-
-
--- {{ Zephyr Setup }} --
-
 Zephyr.NameText.Text =
 	'<font color="#FFFFFF" size="20">' .. Zephyr.Name .. ' |</font> ' ..
 	'<font color="#888888" size="12">' .. Zephyr.Version .. '</font>'
 
 Zephyr.functions.Dragify(Zephyr.Main)
 Zephyr.functions.Dragify(Zephyr.Watermark)
-
--- {{ Zephyr Settings Icon }} --
 
 Zephyr.SettingsIcon.InputBegan:Connect(function(i)
 	if i.UserInputType == Enum.UserInputType.MouseButton1 or i.UserInputType == Enum.UserInputType.Touch then
@@ -433,8 +351,6 @@ Zephyr.SettingsIcon.MouseLeave:Connect(function()
 	)
 	Zephyr.spinTweenBack:Play()
 end)
-
--- {{ Zephyr Watermark }} --
 
 Zephyr.RunService.Heartbeat:Connect(function(Zephyr_dt)
 	Zephyr.frameFPS = 1 / Zephyr_dt
